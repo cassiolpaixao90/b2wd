@@ -12,10 +12,10 @@ const DesafioExperience = ({ title, typeKey, experiences }) => {
   }
   return (
     <div>
-      <div className="main-area">
+      <div className="main-area post-content">
       <h1>{title}</h1>
         <hr className="divider" />
-            <article className="post-content">
+            <article >
               {object.map(exp =>
                 <div>
                     <h2>{exp.name}</h2>

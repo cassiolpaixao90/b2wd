@@ -11,7 +11,7 @@ const DadosProfile = ({ dados }) => {
   return (
     <section >
       <div>
-        <div className="diamond">
+        <div className="diamond" style={{border: '3px double #fff'}}>
           <img src="https://raw.githubusercontent.com/b2w-marketplace/code-challenge/master/files/avatar-dev.png" alt="Avatar" />
         </div>
 

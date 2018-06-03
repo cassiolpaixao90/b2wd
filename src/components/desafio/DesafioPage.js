@@ -12,11 +12,6 @@ class DesafioPage extends React.Component {
     super(props, context);
   }
 
-
-  // componentWillReceiveProps(nextProps) {
-  //   this.setState({desagio: Object.assign({}, nextProps.desafio)});
-  // }
-
    render() {
     const { desafio } = this.props;
     return (
@@ -37,14 +32,6 @@ DesafioPage.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-
-  // const contact = state.desafio.profiles.map(contacts => {
-  //   return {
-  //     contacts:contacts
-  // }});
-  // const experience
-  // const skills
-  // const eduction
 
   return {
     desafio: state.desafio

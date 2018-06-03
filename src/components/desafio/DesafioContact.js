@@ -8,12 +8,20 @@ const DesafioContact = ({ contact }) => {
   let cont = { tel: '', cel: '', address: '', website: '', mail: '' };
   let dados = { name: '', image: '', profession: '', description: '' };
   let skills = [];
-  const styleBorder = { borderTop: '1px solid #fff' };
-  const styleColor = { color: '#fff' };
+
+  const styleBorder =(width) => {
+    return {
+      borderTop: '1px solid #fff',
+      width: `${width}`
+    }
+  };
+  const styleColor = { color: '#fff', textAlign: 'center' };
+
+  const displayBlock = { display: 'block'};
 
   const titleProfile = "Profile";
   const titleContact = "Contact";
-  const titleSkills = "Skils";
+  const titleSkills = "Skills";
 
   if (contact.profile !== undefined) {
     skills = contact.profile.skills;
@@ -25,31 +33,30 @@ const DesafioContact = ({ contact }) => {
     <div className="sidebar sidebar-left">
 
       <DadosProfile dados={dados} />
-
       <section>
-        <div className="profile post-content">
-          <h3 style={styleColor}>{titleProfile.toUpperCase()}</h3>
-          <hr style={styleBorder} />
-          <p style={styleColor}>{dados.description}</p>
+        <div className="profile" style={styleColor}>
+          <h3>{titleProfile.toUpperCase()}</h3>
+          <hr style={styleBorder("70%")} />
+          <p>{dados.description}</p>
         </div>
       </section>
 
       <section>
-        <div className="profile post-content">
-          <h3 style={styleColor}>{titleContact.toUpperCase()}</h3>
-          <hr style={styleBorder} />
-          <span style={{ display: 'block', color: '#fff' }}>{cont.tel}</span>
-          <span style={styleColor} >{cont.cel}</span>
-          <p style={styleColor}>{cont.address}</p>
-          <p style={styleColor}>{cont.website}</p>
-          <p style={styleColor}>{cont.mail}</p>
+        <div style={styleColor}>
+          <h3 >{titleContact.toUpperCase()}</h3>
+          <hr style={styleBorder("60%")} />
+          <span style={displayBlock}>{cont.tel}</span>
+          <span >{cont.cel}</span>
+          <p>{cont.address}</p>
+          <span style={displayBlock}>{cont.website}</span>
+          <span>{cont.mail}</span>
         </div>
       </section>
 
        <section>
-        <div className="profile post-content">
-          <h3 style={styleColor}>{titleSkills.toUpperCase()}</h3>
-          <hr style={styleBorder} />
+        <div style={styleColor}>
+          <h3>{titleSkills.toUpperCase()}</h3>
+          <hr style={styleBorder("50%")} />
           <SkilsProfile skills={skills} />
         </div>
       </section>

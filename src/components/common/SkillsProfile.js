@@ -11,13 +11,20 @@ const SillsProfile = ({ skills }) => {
     };
   };
 
+  const styleBorder =() => {
+    return {
+      backgroundColor: '#000',
+      border: '1px solid #fff'
+    }
+  };
+
 
   return (
     <div>
     {skills.map(skill =>
-       <div>
-       <span style={{color: '#fff'}}>{skill.name}</span>
-        <div style={{backgroundColor: '#000', border: '1px solid #fff'}}>
+       <div style={{color: '#fff'}}>
+       <p >{skill.name.toUpperCase()}</p>
+        <div style={styleBorder()}>
           <div style={progressBar(skill)}></div>
           </div>
         </div>
