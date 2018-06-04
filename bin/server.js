@@ -1,3 +1,5 @@
+/* eslint-disable import/default */
+
 import http from "../tools/app";
 import config from "../settings/environment/index";
 import open from 'open';
