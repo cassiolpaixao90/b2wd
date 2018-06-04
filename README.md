@@ -24,8 +24,10 @@ Desenvolva a página seguindo os seguintes critérios:
 - React e Redux;
 - Mocha para Teste unitário;
 - Webpack;
-- Express
-- NodeJS
+- Express;
+- NodeJS;
+- ES6;
+- Lint;
 - Importante: No [link original da API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5), o endereço da imagem está apontando para a *página* da imagem, não para a imagem em si, que tem um link diferente. Por isso, acabei utilizando esse [mock alterado](http://www.mocky.io/v2/5aadcb062f00003a00273cb7), com o link editado e apontando diretamente para a imagem correta.
 
 ## Como rodar o projeto:
@@ -37,8 +39,6 @@ Desenvolva a página seguindo os seguintes critérios:
   - *Rodando local:* npm start -s
 
   - *Rodando os teste unitários:* npm run test:watch
-
-  - *Rodando o src:* Na pasta raíz do projeto, rode os seguintes comandos no terminal:
 
   - *Rodando a build:* npm run build -s  
 

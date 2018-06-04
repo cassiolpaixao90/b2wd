@@ -3,7 +3,7 @@ import delay from './delay';
 
 const desafio = {
   "profile": {
-    "image": "https://github.com/b2w-marketplace/code-challenge/blob/master/files/avatar-dev.png",
+    "image": "https://raw.githubusercontent.com/b2w-marketplace/code-challenge/master/files/avatar-dev.png",
     "name": "Brian Walker",
     "profession": "Web Developer",
     "description": "27-year old web developer fromt Colorado Springs with 5+ years of work experience in various fields",

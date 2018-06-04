@@ -9,13 +9,31 @@ import compression from 'compression';
 /* eslint-disable no-console */
 const app = express();
 const http = require("http").Server(app);
-const compiler = webpack(configProd);
-app.use(compression());
-app.use(express.static('dist'));
 
-app.get('*', function(req, res) {
-  res.sendFile(path.join( __dirname, '../dist/index.html'));
-});
+if (process.env.NODE_ENV !== 'production') {
+  const webpackMiddleware = require('webpack-dev-middleware');
+  const webpack = require('webpack');
+  const compiler = webpack(configDev);
+  app.use(webpackMiddleware(webpack(configDev)));
+
+  app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: configDev.output.publicPath
+  }));
+  app.use(require('webpack-hot-middleware')(compiler));
+  app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, '../src/index.html'));
+  });
+  console.log("Mode Dev");
+
+} else {
+  app.use(compression());
+  app.use(express.static('dist'));
+  app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
+  });
+  console.log("Mode Prod");
+}
 
 // const compiler = webpack(config);
 

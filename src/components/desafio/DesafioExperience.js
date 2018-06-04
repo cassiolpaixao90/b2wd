@@ -15,7 +15,7 @@ const DesafioExperience = ({ title, typeKey, experiences }) => {
       <div className="main-area post-content">
       <h1>{title}</h1>
         <hr className="divider" />
-            <article >
+            <section >
               {object.map(exp =>
                 <div>
                     <h2>{exp.name}</h2>
@@ -23,7 +23,7 @@ const DesafioExperience = ({ title, typeKey, experiences }) => {
                     <p>{exp.description}</p>
                 </div>
               )}
-            </article>
+            </section>
       </div>
     </div>
     );
