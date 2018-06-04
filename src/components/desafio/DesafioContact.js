@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react";
 import { Link } from "react-router";
 import DadosProfile from "../common/DadosProfile";
-import SkilsProfile from '../common/SkillsProfile';
+import SkillsProfile from '../common/SkillsProfile';
 
 const DesafioContact = ({ contact }) => {
 
@@ -15,8 +15,8 @@ const DesafioContact = ({ contact }) => {
       width: `${width}`
     }
   };
-  const styleColor = { color: '#fff', textAlign: 'center' };
 
+  const styleColor = { color: '#fff', textAlign: 'center' };
   const displayBlock = { display: 'block'};
 
   const titleProfile = "Profile";
@@ -57,7 +57,7 @@ const DesafioContact = ({ contact }) => {
         <div style={styleColor}>
           <h3>{titleSkills.toUpperCase()}</h3>
           <hr style={styleBorder("50%")} />
-          <SkilsProfile skills={skills} />
+          <SkillsProfile skills={skills} />
         </div>
       </section>
     </div>

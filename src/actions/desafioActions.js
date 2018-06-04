@@ -1,6 +1,5 @@
 import * as types from "../constants/actionTypes";
 import desafioApi from "../api/mockDesafioApi";
-import { beginAjaxCall  } from './statusActions';
 
 export function loadDesafioSuccess(desafio) {
   return { type: types.LOAD_DESAFIO, desafio };

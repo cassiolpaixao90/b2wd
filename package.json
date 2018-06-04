@@ -12,7 +12,7 @@
     "open:src": "babel-node bin/server.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools bin settings utils tests",
     "lint:watch": "npm run lint -- --watch",
-    "test": "mocha --reporter progress tests/testSetup.js \"./src/**/*.test.js\"",
+    "test": "mocha --reporter spec tests/testSetup.js \"./src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {

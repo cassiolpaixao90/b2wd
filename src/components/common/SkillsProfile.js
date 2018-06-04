@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const SillsProfile = ({ skills }) => {
+const SkillsProfile = ({ skills }) => {
 
 
   const progressBar = (skill) =>{
@@ -33,15 +33,8 @@ const SillsProfile = ({ skills }) => {
   );
 };
 
-SillsProfile.propTypes = {
+SkillsProfile.propTypes = {
   skills: PropTypes.array.isRequired
 };
 
-export default SillsProfile;
-
-    //  {skills.map(exp =>
-    //   <span></span>
-    //   <div style={{backgroundColor: '#000', border: '1px solid #fff'}}>
-    //     <div style={{height:'24px',width:, backgroundColor:'#fff'}}></div>
-    //   </div>
-    //   )}
+export default SkillsProfile;

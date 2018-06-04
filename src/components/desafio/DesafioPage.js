@@ -6,7 +6,7 @@ import DesafioExperience from './DesafioExperience';
 import DesafioContact from './DesafioContact';
 import DesafioProfile from "./DesafioProfile";
 
-class DesafioPage extends React.Component {
+export class DesafioPage extends React.Component {
 
   constructor(props, context) {
     super(props, context);

@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
 import desafio from './desafioReducer';
-import ajaxCallsInProgress from './statusReducer';
 
 const rootReducer = combineReducers({
-  desafio,
-  ajaxCallsInProgress
+  desafio
 });
 
 export default rootReducer;

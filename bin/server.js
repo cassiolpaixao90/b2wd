@@ -33,7 +33,7 @@ function onError(error) {
     : 'Port ' + port;
 
   switch (error.code) {
-    case 'EACCES':
+    case 'EACCESS':
       console.error(bind + ' requires elevated privileges');
       process.exit(1);
       break;
